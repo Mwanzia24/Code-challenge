@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code-challenge-1</title>
+</head>
+<body>
+    <h1><!--links to all parts odf the code challenge-->
+        <a href="netSalaryCalculator.html">Salary-Calculator</a>
+        <a href="speedDetector.html">Speed-Detector</a>
+        <a href="grading.html">Grading-System</a>
+    </h1>
+    <input id="studentMark"/>
+    <button onclick="getGrade()">Get Grade!</button>
+    <h3 id="showGrade"></h3>
+    
+    <script>
+        const studentMark=document.getElementById(
+    'studentMark'
+);
+const showGrade=document.getElementById(
+    'showGrade'
+)
+function getGrade(){
+const mark=parseInt(studentMark.value);
+let grade;
+if(mark>=80){
+    grade='A';
+}
+else if(mark>=60){
+    grade='B';
+}
+else if (mark>=50){
+    grade='C';
+}
+else if(mark>=40) {
+     grade='D';
+}
+else{grade='E'
+}
+console.log(grade)
+showGrade.innerText=`Your grade is, ${grade}`;
+}
+    </script>
+    
+</body>
+</html>
